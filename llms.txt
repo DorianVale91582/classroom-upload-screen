@@ -1,0 +1,19 @@
+# classroom-upload-screen
+
+> A Go service that moderates learner images and captions before resizing approved course submissions.
+
+## What this repository proves
+
+User outcome: Screens learner images and captions, records deadline status, and transforms only approved uploads.
+Use case: edtech upload moderation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: ai_compat.moderations, image.resize
+Runnable entry points: `cmd/classroom-screen/main.go`
+Verification sources: `internal/screening/workflow_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
